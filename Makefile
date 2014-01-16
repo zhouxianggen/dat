@@ -1,4 +1,4 @@
 
-test : test.o datrie.h common.h
-	g++ -o $@ $^
+test : test.o utils.o dat.o
+	g++ -pg -o $@ $^
 	rm *.o
