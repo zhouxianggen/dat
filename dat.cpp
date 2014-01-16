@@ -91,9 +91,8 @@ int Dat::build(const char* fdict)
   vector<entry_t> entries;
   vector<string> parts;
   for (int i=0; i<lines.size(); i+=1) {
-    if (split(lines[i], parts) == 1) {
-      entries.push_back(entry_t(parts[0], 1));
-      //entries.push_back(entry_t(parts[0], atoi(parts[1].c_str())));
+    if (split(lines[i], parts) == 2) {
+      entries.push_back(entry_t(parts[0], atoi(parts[1].c_str())));
     }
   }
 
